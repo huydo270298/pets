@@ -38,7 +38,7 @@ export const arrayOrder = [
 ];
 
 function Pets() {
-	const limit = 1;
+	const limit = 9;
 	const navigate = useNavigate();
 	const location = useLocation();
 
