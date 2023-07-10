@@ -1,4 +1,4 @@
 const StorageKeys = {
-	API_ENDPOINT: 'http://localhost:3000/api/',
+	API_ENDPOINT: 'https://alert-moth-lingerie.cyclic.app/api/',
 };
 export default StorageKeys;

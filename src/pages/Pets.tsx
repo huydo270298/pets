@@ -95,10 +95,10 @@ function Pets() {
 			'filter pet',
 			{
 				page: Number(queryParams._page) || 1,
-				order: queryParams._order || 'default',
-				color: queryParams['detail.color'] || 'all',
-				gender: queryParams['detail.gender'] || 'all',
-				size: queryParams['detail.size'] || 'all',
+				order: queryParams._order ?? 'default',
+				color: queryParams['detail.color'] ?? 'all',
+				gender: queryParams['detail.gender'] ?? 'all',
+				size: queryParams['detail.size'] ?? 'all',
 				sort,
 			},
 		],
@@ -119,13 +119,13 @@ function Pets() {
 								Small Dog
 								<span className="result">{data?.total} puppies</span>
 							</h3>
-							<div className="select">
+							{/* <div className="select">
 								<Dropdown
 									arrayData={arrayOrder}
 									parentClassName="dropdown--sort"
 									onChange={changeOrder}
 								/>
-							</div>
+							</div> */}
 						</div>
 						<div className="petlist__content">
 							{(isLoading || isError) && (

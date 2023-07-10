@@ -6,7 +6,7 @@ import useClickOutSide from '~/hooks/useClickOutSide';
 interface DropdownPropType {
 	arrayData: OptionType[];
 	parentClassName?: string;
-	onChange: () => void;
+	onChange: (value: any) => void;
 }
 
 interface OptionType {
@@ -37,7 +37,7 @@ function Dropdown({ arrayData, parentClassName, onChange }: DropdownPropType) {
 	};
 
 	useEffect(() => {
-		onChange();
+		onChange(value);
 	}, [value]);
 
 	useClickOutSide(dropdownRef, handleHideOption);
