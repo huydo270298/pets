@@ -1,0 +1,117 @@
+.filter {
+	display: block;
+	width: 280px;
+
+	&__title {
+		display: block;
+		font-size: 24px;
+		color: $dark-blue;
+		line-height: 36px;
+	}
+
+	&-box {
+		padding: 16px 0;
+		border-bottom: 1px solid $color10;
+
+		&__title {
+			display: block;
+			font-size: 16px;
+			color: $color100;
+			line-height: 24px;
+		}
+
+		&__list {
+			margin-top: 10px;
+		}
+
+		&__item {
+			line-height: 0;
+
+			/* stylelint-disable-next-line selector-class-pattern */
+			+.filter-box__item {
+				margin-top: 8px;
+			}
+		}
+
+		&--price {
+
+			/* stylelint-disable-next-line selector-class-pattern */
+			.filter-box__list {
+				display: flex;
+				justify-content: space-between;
+				gap: 20px;
+			}
+
+			/* stylelint-disable-next-line selector-class-pattern */
+			.filter-box__item {
+				flex: 1;
+				margin-top: 0;
+
+				/* stylelint-disable-next-line selector-class-pattern */
+				.inp-price {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+					padding: 10px 25px 10px 10px;
+					border: none;
+					border-bottom: 1px solid $color10;
+					background: url("../images/svg/ico-unfold-more.svg") center right 10px no-repeat;
+					font-size: 14px;
+					color: $color80;
+					outline: none;
+					box-sizing: border-box;
+					line-height: 20px;
+
+					&::placeholder{
+						color: $color80;
+					}
+
+					&::-webkit-inner-spin-button{
+						display: none;
+					}
+				}
+			}
+
+		}
+
+		&--color {
+			.label {
+				display: flex;
+				align-items: center;
+
+				.color {
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					margin-right: 10px;
+					border-radius: 15px;
+
+					&--red {
+						background-color: #ff564f;
+					}
+
+					&--apricot {
+						background-color: #ffb672;
+					}
+
+					&--black {
+						background-color: #242b33;
+					}
+
+					&--black-white {
+						background: linear-gradient(90deg, #242b33 0%, #242b33 52.59%, #d7d7d7 52.6%, #d2d2d2 100%);
+					}
+
+					&--silver {
+						background-color: #cecece;
+					}
+
+					&--tan {
+						background-color: #fff7ce;
+					}
+				}
+			}
+		}
+	}
+}

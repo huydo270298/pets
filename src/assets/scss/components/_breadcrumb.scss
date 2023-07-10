@@ -1,0 +1,32 @@
+.breadcrumb{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 8px 0;
+	box-sizing: border-box;
+
+	&__item,
+	&__link{
+		font-size: 14px;
+		color: $color60;
+		line-height: 20px;
+		line-height: 24px;
+
+		/* stylelint-disable-next-line selector-class-pattern */
+		& + .breadcrumb__item{
+			position: relative;
+			margin-left: 36px;
+
+			&::before{
+				position: absolute;
+				top: 50%;
+				left: -30px;
+				width: 24px;
+				height: 24px;
+				background: url("../images/svg/ico-more.svg");
+				transform: translateY(-50%);
+				content: '';
+			}
+		}
+	}
+}

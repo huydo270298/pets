@@ -1,0 +1,69 @@
+.input {
+	&[type="password"] {
+		padding-right: 45px;
+	}
+
+	&-box {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		.input {
+			width: 100%;
+			padding: 13px 27px;
+			border: 1px solid $color40;
+			border-radius: 8px;
+			font-size: 14px;
+			font-weight: 500;
+			color: $color60;
+			line-height: 20px;
+			box-sizing: border-box;
+
+			&::placeholder {
+				color: $color40;
+			}
+		}
+
+		.message {
+			margin-top: 6px;
+			font-size: 12px;
+			font-weight: 400;
+			color: $color60;
+			line-height: 18px;
+
+			&--error {
+				display: flex;
+				align-items: center;
+				color: $pink-red;
+				gap: 4px;
+			}
+		}
+
+		.icon {
+			&--eye {
+				width: 20px;
+				height: 20px;
+				fill: $color60;
+			}
+		}
+
+		&__group {
+			position: relative;
+	
+			.btn-show {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				padding: 14px 16px 14px 10px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+.label {
+	font-size: 14px;
+	color: $color80;
+	line-height: 20px;
+	cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.skleton{
+	.img{
+		line-height: 1;
+
+		&--big{
+			margin-bottom: 12px;
+		}
+
+		&-list{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 12px;
+			overflow: hidden;
+		}
+	}
+
+	.customer{
+		&__list{
+			display: flex;
+			gap: 12px;
+			overflow: hidden;
+		}
+	}
+}

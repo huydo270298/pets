@@ -1,0 +1,40 @@
+body {
+	font-family: $font;
+	font-weight: 500;
+	color: $color80;
+
+	&[data-overflow='true']{
+		overflow: hidden;
+	}
+}
+
+div,main,section{
+	box-sizing: border-box;
+}
+
+button{
+	font-family: $font;
+}
+
+input::placeholder{
+	color: #99A2A5
+}
+
+input, button {
+	font-family: $font;
+}
+
+.icon {
+	display: inline-block;
+}
+
+.inner {
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@media (max-width: 828px) {
+		padding: 0 16px;
+		max-width: 414px;
+	}
+}

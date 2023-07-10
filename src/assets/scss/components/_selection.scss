@@ -1,0 +1,84 @@
+/* stylelint-disable no-descending-specificity */
+.checkbox {
+	.input {
+		border-radius: 4px;
+
+		&::before {
+			content: none;
+		}
+
+		&:checked {
+			&::before {
+				width: 18px;
+				height: 18px;
+				background-image: url('~/assets/images/svg/ico-checkbox.svg');
+			}
+		}
+	}
+}
+
+.radio {
+	.input {
+		border-radius: 42px;
+
+		&::before {
+			content: none;
+		}
+
+		&:checked {
+			&::before {
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: $white;
+			}
+		}
+	}
+}
+
+.checkbox, .radio {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+
+	.input {
+		flex-shrink: 0;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		border: 1px solid $color60;
+
+		&:checked {
+			border-color: transparent;
+			background-color: $dark-blue;
+		}
+
+		&:disabled {
+			border-color: $color40;
+			background-color: $color20;
+
+			&::before {
+				opacity: .7;
+			}
+
+			& + .label {
+				cursor: auto;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			content: '';
+		}
+	}
+
+	.label {
+		padding-left: 12px;
+	}
+}
+
+
+
